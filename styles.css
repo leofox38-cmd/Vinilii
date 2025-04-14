@@ -1,0 +1,468 @@
+/* Stili generali */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Modalità Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+.dark-mode .container, 
+.dark-mode .login-container,
+.dark-mode .feature-box,
+.dark-mode .product-detail,
+.dark-mode .item {
+    background-color: #1e1e1e;
+    color: #f8f9fa;
+}
+.dark-mode input, 
+.dark-mode button {
+    background-color: #333;
+    color: #f8f9fa;
+    border-color: #555;
+}
+.dark-mode a {
+    color: #f8f9fa;
+}
+.dark-mode .item-name {
+    color: #f8f9fa;
+}
+.dark-mode .product-info h2 {
+    color: #f8f9fa;
+}
+
+/* Stili per il tema normale (light) per i pulsanti */
+.navbar-nav .nav-link.nav-button {
+    background-color: transparent;
+    border: 2px solid #dc3545;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 0 5px;
+    color: #ffffff; 
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 100px;
+}
+/* Stili per il selettore a tendina dei generi */
+.form-select {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 0.375rem 0.75rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-select:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* Tema scuro per il selettore */
+.dark-mode .form-select {
+    background-color: #333;
+    color: #f8f9fa;
+    border-color: #555;
+}
+
+.dark-mode .form-select option {
+    background-color: #333;
+}
+
+/* Stili per i badge dei filtri attivi */
+.active-filters {
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+}
+
+.dark-mode .active-filters {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.badge {
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: normal;
+}
+.navbar-nav .nav-link.nav-button:hover {
+    background-color: #dc3545;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Pulsanti scuri in modalità chiara */
+body:not(.dark-mode) .navbar-nav .nav-link.nav-button {
+    color: #ffffff;
+}
+
+/* Pulsanti chiari in modalità scura */
+.dark-mode .navbar-nav .nav-link.nav-button {
+    color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Stili per la navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #212529;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.navbar-brand {
+    font-size: 2.2rem !important;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Aggiunta per il saluto utente */
+.user-greeting {
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+/* Pulsanti di navigazione */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0.25rem;
+    border: 2px solid transparent;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(220, 53, 69, 0.2);
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active { /* se sei sulla pagina attuale viene fatto il bianco la scritta */
+    background-color: #dc3545;
+    color: white !important;
+}
+
+/* Stili per la home page */
+.hero-section {
+    background-color: #212529;
+    color: white;
+    padding: 60px 0;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Stili per il catalogo */
+.catalogo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item-image {
+    height: 240px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #212529;
+}
+
+.item-info {
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.item .btn {
+    align-self: flex-start;
+}
+
+/* Stili per la pagina di dettaglio */
+.product-detail {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 5px;
+}
+
+.product-info h2 {
+    margin-bottom: 20px;
+    color: #212529;
+}
+
+.product-info p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #dc3545;
+    margin: 20px 0;
+}
+
+.availability {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.availability.in-stock {
+    color: #28a745;
+}
+
+.availability.low-stock {
+    color: #ffc107;
+}
+
+.availability.out-of-stock {
+    color: #dc3545;
+}
+
+/* Stili per il carrello */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: inherit;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.dark-mode .table thead th,
+.dark-mode .table td {
+    border-color: #444;
+}
+
+/* Stili responsive */
+@media (max-width: 992px) {
+    .catalogo-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navbar-brand {
+        margin-bottom: 1rem;
+        font-size: 1.8rem !important;
+    }
+    
+    .user-greeting {
+        margin: 0.5rem 0;
+        order: 2;
+    }
+    
+    .navbar-nav {
+        width: 100%;
+        justify-content: center;
+        order: 3;
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalogo-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .navbar-nav .nav-link.nav-button {
+        min-width: 80px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ────────────────────────────── */
+/* Stili per i form di Login e Registrazione */
+/* ────────────────────────────── */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-container form input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #dc3545;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.form-container form button:hover {
+    opacity: 0.9;
+}
+
+.form-container .error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.dark-mode .form-container .error {
+    color: #ff6b6b;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.form-container a {
+    color: #dc3545;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode per il form */
+.dark-mode .form-container {
+    background-color: #1e1e1e;
+    color: #f8f9fa;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .form-container h2 {
+    color: #f8f9fa;
+}
